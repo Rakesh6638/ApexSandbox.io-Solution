@@ -1,6 +1,11 @@
 public Boolean isPrime(Integer num) {
     //code here
-    for(Integer i=2; i<num-1; i++){
+    if(num <= 1) return false;
+    if(num == 2) return true;
+    if(Math.mod(num,2) == 0) return false;
+
+    Integer limit = (Integer)Math.sqrt(num);
+    for(Integer i=3; i<limit; i++){
         if(Math.mod(num,i)==0){
             return false;
         }
