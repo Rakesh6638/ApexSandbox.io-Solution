@@ -1,0 +1,12 @@
+public Boolean isPalindrome(String str){
+    //code here
+    Integer left=1;
+    Integer right=str.length()-1;
+
+    while(left<right){
+        if(str.substring(left-1, left) != str.substring(right-1, right)){
+            return false;
+        }
+    }
+    return true;
+}
