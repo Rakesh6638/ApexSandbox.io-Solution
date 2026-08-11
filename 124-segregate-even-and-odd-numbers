@@ -21,8 +21,8 @@ public static void segregateEvenOdd(List<Integer> numbers){
             numbers.add(left, numbers[right]);
             numbers.add(right, temp);
             
-            left++;
-            right--;
+            /*left++;
+            right--;*/
         }
     }
 }
