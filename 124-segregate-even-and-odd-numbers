@@ -8,10 +8,10 @@ public static void segregateEvenOdd(List<Integer> numbers){
     Integer right = numbers.size()-1;
 
     while(left < right){
-        if(Math.mod(i,2)==0 && left < right){
+        if(Math.mod(numbers[left],2)==0 && left < right){
             left++;
         }
-        else if(Math.mod(i,2)!=0 && left < right){
+        else if(Math.mod(numbers[right],2)!=0 && left < right){
             right--;
         }
 
