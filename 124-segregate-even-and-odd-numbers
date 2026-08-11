@@ -12,4 +12,5 @@ public static void segregateEvenOdd(List<Integer> numbers){
             result.add(i);
         }
     }
+    numbers = result;
 }
