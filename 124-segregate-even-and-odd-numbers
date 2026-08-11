@@ -1,6 +1,5 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     //code here
-    //numbers.sort();
     List<Integer> result =new List<Integer>();
     Integer firstNum = numbers[0];
 
