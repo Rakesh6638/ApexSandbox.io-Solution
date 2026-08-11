@@ -7,6 +7,8 @@ public Boolean isPalindrome(String str){
         if(str.substring(left-1, left) != str.substring(right-1, right)){
             return false;
         }
+        left++;
+        right--;
     }
     return true;
 }
