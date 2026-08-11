@@ -9,17 +9,17 @@ public static void segregateEvenOdd(List<Integer> numbers){
 
     while(left < right){
         while(Math.mod(numbers[left],2)==0 && left < right){
-            ++left;
+            left++;
         }
         while(Math.mod(numbers[right],2)!=0 && left < right){
-            --right;
+            right--;
         }
 
         // If left is still less than right, swap the odd and even numbers
         if (left < right) {
             Integer temp = numbers[left];
-            numbers.add(left, numbers[right]);
-            numbers.add(right, temp);
+            numbers.set(left, numbers[right]);
+            numbers.set(right, temp);
             
             /*left++;
             right--;*/
