@@ -5,13 +5,13 @@ public Boolean isPalindrome(String str){
         return false;
     }
 
-    Integer left=1;
+    Integer left=0;
     Integer right=str.length()-1;
 
     str = str.replaceAll('[^0-9a-zA-Z]','');
     
     while(left<right){
-        if(str.substring(left-1, left) != str.substring(right-1, right)){
+        if(str.substring(left, left+1) != str.substring(right-1, right)){
             return false;
         }
         left++;
