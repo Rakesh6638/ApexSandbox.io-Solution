@@ -1,8 +1,15 @@
 public Boolean isPalindrome(String str){
     //code here
+
+    if(String.isBlank(str)){
+        return false;
+    }
+
     Integer left=1;
     Integer right=str.length()-1;
 
+    str.replaceAll([0-9a-zA-Z],'');
+    
     while(left<=right){
         if(str.substring(left-1, left) != str.substring(right-1, right)){
             return false;
