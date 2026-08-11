@@ -1,6 +1,6 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     //code here
-    if(numbers == null || number.isEmpty()){
+    if(numbers == null || numbers.isEmpty()){
         return;
     }
     List<Integer> result =new List<Integer>();
