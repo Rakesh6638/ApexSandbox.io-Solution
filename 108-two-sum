@@ -18,7 +18,7 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
          if(existingMap.containsKey(diff)){
            return new List<Integer>{existingMap.get(diff), i};
          }
-         existingMap.put(diff, i);
+         existingMap.put(nums[i], i);
      }
      return new List<Integer>();
 }
