@@ -2,25 +2,15 @@ public void defragging(Integer[] memory)
 {
     // code here
     Integer left = 0;
-    Integer right = left + 1;
 
-    while(left<right){
-        if(right >= memory.size()){
-            break;
-        }
-        if(memory[left]!=-1){
-            left+=1;
-            right=left+1;
-        }
-        else if(memory[left]==-1 && memory[right]!=-1){
-            Integer temp = memory[right];
-            memory[right] = memory[left];
-            memory[left] = temp;
-            left+=1;
-            right=left+1;
-        }
-        else{
-            right++;
+    for (Integer i = 0; i < memory.size(); i++) {
+        if (memory[i] != -1) {
+            if (i != left) {
+                Integer temp = memory[left];
+                memory[left] = memory[i];
+                memory[i] = temp;
+            }
+            left++;
         }
     }
 }
