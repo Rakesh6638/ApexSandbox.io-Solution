@@ -11,5 +11,4 @@ public static void segregateEvenOdd(List<Integer> numbers){
         }
     }
     evenNums.addAll(oddNums);
-    return evenNums;
 }
