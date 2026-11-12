@@ -14,12 +14,12 @@ public class Stack {
     
     public Object pop() {
         //implement pop
-        this.items.remove(size()-1);
+        return this.items.remove(size()-1);
     }
     
     public Integer size() {
         //implement size
-        this.items.size();
+        return this.items.size();
     }
     
     public Object peek(){
