@@ -29,5 +29,6 @@ public class Stack {
     
     public Boolean isEmpty() {
         //implement isEmpty
+        return this.items.isEmpty;
     }
 }
