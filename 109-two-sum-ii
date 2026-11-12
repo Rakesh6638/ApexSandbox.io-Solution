@@ -1,0 +1,12 @@
+public List<Integer> twoSum(List<Integer> nums, Integer target){
+    //code here
+     Map<Integer, Integer> existingMap = new Map<Integer, Integer>();
+     for(Integer i=0;i<nums.size();i++){
+         Integer diff = target - nums[i];
+         if(existingMap.containsKey(diff)){
+           return new List<Integer>{existingMap.get(diff), i};
+         }
+         existingMap.put(nums[i], i);
+     }
+     return new List<Integer>();
+}
