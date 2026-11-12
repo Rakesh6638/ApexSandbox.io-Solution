@@ -1,6 +1,6 @@
 public static List<Integer> twoSum(List<Integer> nums, Integer target) {
      //code here
-     for(Integer i=0;i<nums.size();i++){
+    /* for(Integer i=0;i<nums.size();i++){
          Integer diff = target - nums[i];
          if(nums.contains(diff) && nums.indexOf(diff)!=i){
             List<Integer> result = new List<Integer>();
@@ -8,6 +8,17 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
             result.add(nums.indexOf(diff));
              return result;
          }
+     }
+     return new List<Integer>();*/
+
+     //Best approach
+     Map<Integer, Integer> existingMap = new Map<Integer, Integer>();
+     for(Integer i=0;i<nums.size();i++){
+         Integer diff = target - nums[i];
+         if(existingMap.containsKey(diff)){
+           return new List<Integer>{existingMap.get(diff), i};
+         }
+         existingMap.put(diff, i);
      }
      return new List<Integer>();
 }
