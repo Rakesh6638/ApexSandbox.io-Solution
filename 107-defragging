@@ -8,11 +8,11 @@ public void defragging(Integer[] memory)
         if(right >= memory.size()){
             break;
         }
-        if(memory[left]>=0){
+        if(memory[left]!=-1){
             left+=1;
             right=left+1;
         }
-        else if(memory[left]<0 && memory[right]>=0){
+        else if(memory[left]==-1 && memory[right]!=-1){
             Integer temp = memory[right];
             memory[right] = memory[left];
             memory[left] = temp;
