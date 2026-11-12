@@ -30,7 +30,7 @@ public class Stack {
         if(isEmpty()){
             return null;
         }
-        return this.items(size()-1);
+        return this.items[size()-1];
     }
     
     public Boolean isEmpty() {
