@@ -5,6 +5,9 @@ public void defragging(Integer[] memory)
     Integer right = left + 1;
 
     while(left<right){
+        if(right >= memory.size()){
+            break;
+        }
         if(memory[left]>=0){
             left+=1;
             right=left+1;
