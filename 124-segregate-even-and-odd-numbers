@@ -1,28 +1,15 @@
 public static void segregateEvenOdd(List<Integer> numbers){
     //code here
-    if(numbers == null || numbers.isEmpty()){
-        return;
-    }
-    
-    Integer left = 0;
-    Integer right = numbers.size()-1;
-
-    while(left < right){
-        while(Math.mod(numbers[left],2)==0 && left < right){
-            left++;
+    List<Integer> evenNums = new List<Integer>();
+    List<Integer> oddNums = new List<Integer>();
+    for(Integer val : numbers){
+        if(Math.mod(val,2)==0){
+            evenNums.add(val);
         }
-        while(Math.mod(numbers[right],2)!=0 && left < right){
-            right--;
-        }
-
-        // If left is still less than right, swap the odd and even numbers
-        if (left < right) {
-            Integer temp = numbers[left];
-            numbers.set(left, numbers[right]);
-            numbers.set(right, temp);
-            
-            left++;
-            right--;
+        else{
+            oddNums.add(val);
         }
     }
+    evenNums.addAll(oddNums);
+    return evenNums;
 }
