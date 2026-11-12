@@ -3,7 +3,10 @@ public static List<Integer> twoSum(List<Integer> nums, Integer target) {
      for(Integer i=0;i<num.size();i++){
          Integer diff = target - nums[i];
          if(nums.contains(diff)){
-             return new List<Integer>{i,nums.indexOf(diff)}
+            List<Integer> result = new List<Integer>();
+            result.add(i);
+            result.add(nums.indexOf(diff));
+             return result;
          }
      }
      return new List<Integer>();
