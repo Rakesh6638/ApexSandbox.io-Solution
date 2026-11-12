@@ -5,7 +5,11 @@ public void defragging(Integer[] memory)
     Integer right = left + 1;
 
     while(left<right){
-        if(memory[left]<0 && memory[right]>=0){
+        if(memory[left]>=0){
+            left+=1;
+            right=left+1;
+        }
+        else if(memory[left]<0 && memory[right]>=0){
             Integer temp = memory[right];
             memory[right] = memory[left];
             memory[left] = temp;
